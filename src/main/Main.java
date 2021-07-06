@@ -3,16 +3,17 @@ package main;
 
 import javax.security.auth.login.LoginException;
 
+import ChatManager.ChatMangingListener;
 import net.dv8tion.jda.api.JDABuilder;
 
 public class Main {
 	
 	//Write Your Bot Token
-	private static String token = "WRITE YOUR TOKEN";
+	private static String token = "Write Your Bot Token";
 	
 	//Write Your Discord UserId *USER ID IS NOT YOUR NICKNAME*
 	//You can't Use Server Manager Command ex) !Add Forbidden Words "Forbidden Words"
-	public static String serverManagerID = "WRITE YOUR DISCORD USER ID";
+	public static String serverManagerID = "Write Your Discord User Id";
 	
 	//Write Forbidden Words ex) {"FUCK", "WTF"}
 	//You can add Words at Runtime With !Add Forbidden Words "Forbidden Words"
@@ -29,9 +30,13 @@ public class Main {
 	//Member Can Read This with !show info
 	public static String channelRule = "WRITE YOUR CHANNEL'S RULE";
 	
+	//Language
+	//English : 0, Korean : 1
+	public static int language = 1;
 	
 	
 	public static void main(String[] args) throws LoginException {
-		JDABuilder.createDefault(token).addEventListeners(new MyListener()).build();
+		
+		JDABuilder.createDefault(token).addEventListeners(new ChatMangingListener()).build();
 	}
 }

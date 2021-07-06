@@ -1,9 +1,10 @@
-package main;
+package ChatManager;
 
 import java.util.Map;
 
 import org.apache.commons.collections4.map.HashedMap;
 
+import main.Main;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
