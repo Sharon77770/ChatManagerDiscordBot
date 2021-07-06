@@ -26,7 +26,7 @@ Run the Discord bot after setting the basic settings in the Main.java file.
 
 -Your Channel's Rule (String)
 
--Language (int) **English:0, Korean:1**
+-Language (int) **English : 0, Korean : 1**
 
 
 ```java
@@ -94,7 +94,7 @@ Main.java 파일에서 기본 설정 후 실행시켜 주세요.
 
 -봇을 사용할 채널만의 고유 룰 (String)
 
--언어 (int) **영어:0, 한글:1**
+-언어 (int) **영어 : 0, 한글 : 1**
 
 ```java
 package main;
