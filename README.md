@@ -1,6 +1,7 @@
 # ChatManagerDiscordBot
 
 **Project_by Sharon77770**
+**Made with Java(JDA)**
 
 Discord chat management bot. If you use prohibited words, you will receive a warning (WARNING_POINT), and if you receive more than a certain amount, you will be kicked out of the server.
 
