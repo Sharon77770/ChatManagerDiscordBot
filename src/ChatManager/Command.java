@@ -10,7 +10,7 @@ import net.dv8tion.jda.api.entities.User;
 
 public class Command {
 	public static Vector<String> words = new Vector<>();
-	private static String[][] cmd = { 
+	private static final String[][] cmd = { 
 				{ "!show info", "!add forbidden words ", "!show warning point" },
 				{ "!도움", "!금지어 추가 ", "!벌점" } 
 			};
