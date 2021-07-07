@@ -74,7 +74,13 @@ public class Main {
 }
 ```
 
+## Command
 
+-!add forbidden words "forbidden word" : add frobidden word
+
+-!show warning point : show your WARNING_POINT
+
+-!show forbidden words : show list of forbidden words
 
 ## 한국어
 
@@ -134,3 +140,11 @@ public class Main {
 	}
 }
 ```
+
+## 명령어
+
+-!금지어 추가 "금지어" : 금지어를 추가합니다.
+
+-!벌점 : 경고 횟수를 확인합니다.
+
+-!금지어 : 금지어 리스트를 보여줍니다.
