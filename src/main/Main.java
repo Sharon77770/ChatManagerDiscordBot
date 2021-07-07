@@ -11,7 +11,7 @@ public class Main {
 	//Write Your Bot Token
 	private static final String token = "Write Your Bot Token";
 	
-	//Write Your Discord UserId *USER ID IS NOT YOUR NICKNAME*
+	//Write Your Discord User Id *USER ID IS NOT YOUR NICKNAME*
 	//You can't Use Server Manager Command ex) !Add Forbidden Words "Forbidden Words"
 	public static final String serverManagerID = "Write Your Discord User Id";
 	

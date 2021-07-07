@@ -44,5 +44,6 @@ public class ChatMangingListener extends ListenerAdapter{
 		Command.showCmd(msg, ch);
 		Command.addForbiddenWords(user, msg, ch);
 		Command.showMyWarnningPoint(user, msg, ch);
+		Command.showForbiddenWords(user, msg, ch);
 	} 
 }

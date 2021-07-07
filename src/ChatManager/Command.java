@@ -11,8 +11,8 @@ import net.dv8tion.jda.api.entities.User;
 public class Command {
 	public static Vector<String> words = new Vector<>();
 	private static final String[][] cmd = { 
-				{ "!show info", "!add forbidden words ", "!show warning point" },
-				{ "!도움", "!금지어 추가 ", "!벌점" } 
+				{ "!help", "!add forbidden words ", "!show warning point", "!show forbidden words" },
+				{ "!도움", "!금지어 추가 ", "!벌점", "!금지어" } 
 			};
 	
 	private static final int KOREAN = 1, ENGLISH = 0;
@@ -31,7 +31,8 @@ public class Command {
 						+ "\n\n"
 						+ "명령어\n"
 						+ "-" + cmd[1][1] + "\"금지어\" : 금지어를 추가합니다.\n"
-						+ "-" + cmd[1][2] + " : 경고 횟수를 확인합니다.";
+						+ "-" + cmd[1][2] + " : 경고 횟수를 확인합니다.\n"
+						+ "-" + cmd[1][3] + " : 금지어 리스트를 보여줍니다.";
 			}
 			else {
 				
@@ -39,7 +40,8 @@ public class Command {
 						+ "\n\n"
 						+ "Command\n"
 						+ "-" + cmd[0][1] + "\"forbidden word\" : add frobidden word\n"
-						+ "-" + cmd[0][2] + " : show your WARNING_POINT";
+						+ "-" + cmd[0][2] + " : show your WARNING_POINT\n"
+						+ "-" + cmd[0][3] + " : show list of forbidden words";
 			}
 			
 			embed.addBlankField(true);
@@ -86,6 +88,19 @@ public class Command {
 				ch.sendMessage(user.getAsMention() + 
 						"'s WARNING_POINT : " + UserInfoManager.getValue(user.getId())).queue();
 			}
+		}
+	}
+	
+	public static void showForbiddenWords(User user, Message msg, TextChannel ch) {
+		if(msg.getContentRaw().equals(cmd[Main.language][3])) {
+			
+			String newMsg = "List\n\n";
+			
+			for(int cnt = 0; cnt < words.size(); ++cnt) {
+				newMsg += "-" + words.get(cnt) + "\n";
+			}
+			
+			ch.sendMessage(newMsg).queue();
 		}
 	}
 }
