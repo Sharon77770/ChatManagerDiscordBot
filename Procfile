@@ -1,1 +1,1 @@
-woker: python bot.py
+woker: java bin/main/Main.class
